@@ -1,0 +1,12 @@
+[gd_resource type="GradientTexture2D" load_steps=2 format=3 uid="uid://8big36w48e3b"]
+
+[sub_resource type="Gradient" id="Gradient_hover"]
+colors = PackedColorArray(0.25, 0.25, 0.27, 1, 0.3, 0.3, 0.32, 1)
+
+[resource]
+gradient = SubResource("Gradient_hover")
+width = 32
+height = 32
+fill = 1
+fill_from = Vector2(0.5, 0)
+fill_to = Vector2(0.5, 1)

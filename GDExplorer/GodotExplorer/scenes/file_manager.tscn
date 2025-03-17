@@ -1,0 +1,103 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4uy8j7l8p3ar"]
+
+[ext_resource type="Script" uid="uid://68castepo76n" path="res://scripts/file_manager.gd" id="1_script"]
+
+[node name="FileManager" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="MainContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TopPanel" type="PanelContainer" parent="MainContainer"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainContainer/TopPanel"]
+layout_mode = 2
+
+[node name="NavigationPanel" type="HBoxContainer" parent="MainContainer/TopPanel/HBoxContainer"]
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="MainContainer/TopPanel/HBoxContainer/NavigationPanel"]
+layout_mode = 2
+text = "←"
+
+[node name="ForwardButton" type="Button" parent="MainContainer/TopPanel/HBoxContainer/NavigationPanel"]
+layout_mode = 2
+text = "→"
+
+[node name="UpButton" type="Button" parent="MainContainer/TopPanel/HBoxContainer/NavigationPanel"]
+layout_mode = 2
+text = "↑"
+
+[node name="VSeparator" type="VSeparator" parent="MainContainer/TopPanel/HBoxContainer/NavigationPanel"]
+layout_mode = 2
+
+[node name="RefreshButton" type="Button" parent="MainContainer/TopPanel/HBoxContainer/NavigationPanel"]
+layout_mode = 2
+text = "⟳"
+
+[node name="VSeparator2" type="VSeparator" parent="MainContainer/TopPanel/HBoxContainer"]
+layout_mode = 2
+
+[node name="ActionPanel" type="HBoxContainer" parent="MainContainer/TopPanel/HBoxContainer"]
+layout_mode = 2
+
+[node name="NewFolderButton" type="Button" parent="MainContainer/TopPanel/HBoxContainer/ActionPanel"]
+layout_mode = 2
+text = "+"
+
+[node name="DeleteButton" type="Button" parent="MainContainer/TopPanel/HBoxContainer/ActionPanel"]
+layout_mode = 2
+text = "×"
+
+[node name="VSeparator" type="VSeparator" parent="MainContainer/TopPanel/HBoxContainer/ActionPanel"]
+layout_mode = 2
+
+[node name="CopyButton" type="Button" parent="MainContainer/TopPanel/HBoxContainer/ActionPanel"]
+layout_mode = 2
+text = "📄"
+
+[node name="PasteButton" type="Button" parent="MainContainer/TopPanel/HBoxContainer/ActionPanel"]
+layout_mode = 2
+text = "📋"
+
+[node name="VSeparator3" type="VSeparator" parent="MainContainer/TopPanel/HBoxContainer"]
+layout_mode = 2
+
+[node name="PathLine" type="LineEdit" parent="MainContainer/TopPanel/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+placeholder_text = "Введите путь..."
+
+[node name="VSeparator4" type="VSeparator" parent="MainContainer/TopPanel/HBoxContainer"]
+layout_mode = 2
+
+[node name="SearchBox" type="LineEdit" parent="MainContainer/TopPanel/HBoxContainer"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+placeholder_text = "Поиск..."
+
+[node name="VSeparator5" type="VSeparator" parent="MainContainer/TopPanel/HBoxContainer"]
+layout_mode = 2
+
+[node name="MainArea" type="HSplitContainer" parent="MainContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="FileTree" type="Tree" parent="MainContainer/MainArea"]
+custom_minimum_size = Vector2(200, 0)
+layout_mode = 2
+
+[node name="FileList" type="ItemList" parent="MainContainer/MainArea"]
+layout_mode = 2
